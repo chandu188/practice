@@ -6,11 +6,11 @@ import (
 )
 
 func TestLinkedList(t *testing.T) {
-	data := []int{1,2,3}
+	data := []int{1, 2, 3}
 	ll := newLLFrom(data)
 	assert.Equal(t, len(data), ll.size)
 	//1->2->3->4->5->6->7
-	data = []int{1,2,3,4,5,6,7}
+	data = []int{1, 2, 3, 4, 5, 6, 7}
 	ll = newLLFrom(data)
 	assert.Equal(t, len(data), ll.size)
 	assert.Equal(t, ll.front.data, 1)
@@ -18,7 +18,7 @@ func TestLinkedList(t *testing.T) {
 }
 
 func TestSortedLLToBBST(t *testing.T) {
-	data := []int{1,2,3,4,5,6,7}
+	data := []int{1, 2, 3, 4, 5, 6, 7}
 	ll := newLLFrom(data)
 	bst := SortedLLTOBBST(ll)
 	inorder := bst.Inorder()

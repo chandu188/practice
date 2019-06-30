@@ -1,35 +1,36 @@
 package trie
 
 import (
-	"testing"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
+
 func TestTrie(t *testing.T) {
-	input := []struct{
-		key string
+	input := []struct {
+		key   string
 		value int
 	}{
 		{
-			key: "by",
+			key:   "by",
 			value: 4,
 		},
 		{
-			key: "Shell",
+			key:   "Shell",
 			value: 42,
 		},
 		{
-			key: "Sort",
+			key:   "Sort",
 			value: 41,
 		},
 		{
-			key: "MergeSort",
+			key:   "MergeSort",
 			value: 2,
 		},
 	}
 
 	tr := trie{}
 	for _, n := range input {
-		tr.Put(n.key,n.value)
+		tr.Put(n.key, n.value)
 	}
 
 	assert.Equal(t, 4, tr.Get("by"))

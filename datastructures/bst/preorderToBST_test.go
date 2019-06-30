@@ -4,6 +4,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
+
 /*
 	 {10, 5, 1, 7, 40, 50}
 
@@ -15,7 +16,7 @@ import (
 					1    7      50
 */
 
-func TestPreOrderToBSTM1(t *testing.T){
+func TestPreOrderToBSTM1(t *testing.T) {
 	input := []int{10, 5, 1, 7, 40, 50}
 	bst := preOrderToBST(input)
 	assert.Equal(t, len(input), bst.Size())
@@ -27,7 +28,7 @@ func TestPreOrderToBSTM1(t *testing.T){
 	}
 }
 
-func TestPreOrderToBSTM2(t *testing.T){
+func TestPreOrderToBSTM2(t *testing.T) {
 	input := []int{10, 5, 1, 7, 40, 50}
 	bst := preOrderToBSTM2(input)
 	assert.Equal(t, len(input), bst.Size())

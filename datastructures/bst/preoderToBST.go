@@ -22,8 +22,6 @@ func preOrderToBSTM2(data []int) *Bst {
 	return &Bst{root: n}
 }
 
-
-
 func method1(data []int, low int, high int) *node {
 	if low > high {
 		return nil

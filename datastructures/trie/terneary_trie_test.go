@@ -1,58 +1,60 @@
 package trie
 
-import ("testing"
-"github.com/stretchr/testify/assert")
+import (
+	"github.com/stretchr/testify/assert"
+	"testing"
+)
 
 func TestTerenaryTrie(t *testing.T) {
-	tt  := &TerenaryTrie{}
+	tt := &TerenaryTrie{}
 	input := []struct {
-		key string
+		key   string
 		value int
 	}{
 		{
-			key : "she",
+			key:   "she",
 			value: 0,
 		},
 		{
-			key : "sells",
+			key:   "sells",
 			value: 1,
 		},
 		{
-			key : "sea",
+			key:   "sea",
 			value: 2,
 		},
 		{
-			key : "shells",
+			key:   "shells",
 			value: 3,
 		},
 		{
-			key : "by",
+			key:   "by",
 			value: 4,
 		},
 		{
-			key : "the",
+			key:   "the",
 			value: 5,
-		},{
-			key : "sea",
+		}, {
+			key:   "sea",
 			value: 6,
-		},{
-			key : "shore",
+		}, {
+			key:   "shore",
 			value: 7,
 		},
 	}
-   for _, in := range input {
-	   tt.Put(in.key, in.value)
-   }
+	for _, in := range input {
+		tt.Put(in.key, in.value)
+	}
 
-   testCases := []struct{
-	   key string
-	   value int
-   }{
-	   {key: "sea", value: 6},{key: "shelter", value: -1},
-   }
+	testCases := []struct {
+		key   string
+		value int
+	}{
+		{key: "sea", value: 6}, {key: "shelter", value: -1},
+	}
 
-   for _, tc :=range testCases {
-	   act := tt.Get(tc.key)
-	   assert.Equal(t, tc.value, act)
-   }
+	for _, tc := range testCases {
+		act := tt.Get(tc.key)
+		assert.Equal(t, tc.value, act)
+	}
 }
