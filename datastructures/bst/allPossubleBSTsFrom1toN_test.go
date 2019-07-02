@@ -1,8 +1,8 @@
 package bst
 
 import (
-	"testing"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func TestAllPossibelBsts(t *testing.T) {

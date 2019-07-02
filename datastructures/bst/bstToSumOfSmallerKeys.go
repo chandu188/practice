@@ -1,8 +1,8 @@
-package bst 
+package bst
 
 func BstToSumOfSmallerKeys(bst *Bst) {
 	sum := 0
-	 bstToSumOfSmallerKeys(bst.root, &sum)
+	bstToSumOfSmallerKeys(bst.root, &sum)
 }
 
 func bstToSumOfSmallerKeys(n *node, sum *int) {

@@ -1,6 +1,6 @@
 package bst
 
-func AddGreaterKeysToAllTheKeys(bst *Bst)  {
+func AddGreaterKeysToAllTheKeys(bst *Bst) {
 	sum := 0
 	addGreaterKeysToAllTheKeys(bst.root, &sum)
 }

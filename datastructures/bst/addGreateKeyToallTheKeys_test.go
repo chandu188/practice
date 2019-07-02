@@ -1,11 +1,12 @@
 package bst
 
 import (
-	"testing"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
-func TestAddGreaterKeysToAllTheKeys(t *testing.T){
-	input := []int{5,2, 13}
+
+func TestAddGreaterKeysToAllTheKeys(t *testing.T) {
+	input := []int{5, 2, 13}
 	bst := NewBSTFrom(input)
 	AddGreaterKeysToAllTheKeys(bst)
 	act := []int{20, 18, 13}
