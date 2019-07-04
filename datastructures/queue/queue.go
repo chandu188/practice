@@ -1,6 +1,6 @@
 package queue
 
-type Queue struct{
+type Queue struct {
 	data []int
 }
 
@@ -12,11 +12,11 @@ func (q *Queue) Size() int {
 	return len(q.data)
 }
 
-func (q *Queue) Push(data int){
+func (q *Queue) Push(data int) {
 	q.data = append(q.data, data)
 }
 
-func (q *Queue) Pop() int {	
+func (q *Queue) Pop() int {
 	if q.Size() > 0 {
 		data := q.data[0]
 		q.data = q.data[1:]

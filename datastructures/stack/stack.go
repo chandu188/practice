@@ -1,11 +1,10 @@
 package stack
 
-
 type Stack struct {
 	data []interface{}
 }
 
-func NewStack() *Stack{
+func NewStack() *Stack {
 	return &Stack{data: make([]interface{}, 0)}
 }
 
@@ -13,7 +12,7 @@ func (s *Stack) Push(data interface{}) {
 	s.data = append(s.data, data)
 }
 
-func (s *Stack) Size() int{
+func (s *Stack) Size() int {
 	return len(s.data)
 }
 
@@ -24,7 +23,6 @@ func (s *Stack) Pop() interface{} {
 		return data
 	}
 
-
 	return -1
-	
+
 }

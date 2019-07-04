@@ -7,7 +7,7 @@ func ReversePathFromNode(bst *Bst, key int) {
 	bst.root = reversePathFromNode(bst.root, key, q)
 }
 
-func reversePathFromNode(n *node, key int, q *queue.Queue) *node{
+func reversePathFromNode(n *node, key int, q *queue.Queue) *node {
 	if n == nil {
 		return nil
 	}

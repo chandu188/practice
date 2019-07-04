@@ -1,10 +1,11 @@
 package queue
 
 import (
-	"testing"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
-func TestQueue(t *testing.T)  {
+
+func TestQueue(t *testing.T) {
 	q := NewQueue()
 	q.Push(10)
 	q.Push(11)

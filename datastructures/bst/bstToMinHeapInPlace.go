@@ -24,19 +24,19 @@ func bstToSLL(n *node, head **node) *node {
 	return n
 }
 
-func sllToMinHeap(n *node, head *node) *node{
-	if head== nil {
+func sllToMinHeap(n *node, head *node) *node {
+	if head == nil {
 		return nil
 	}
 
 	var root *node
-	root= head
+	root = head
 	head = head.right
 
 	q := make([]*node, 0)
 	q = append(q, root)
 
-	for ;head!=nil;{
+	for head != nil {
 		parent := q[0]
 		q = q[1:]
 
@@ -56,4 +56,3 @@ func sllToMinHeap(n *node, head *node) *node{
 	}
 	return root
 }
-

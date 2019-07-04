@@ -1,6 +1,7 @@
 package bst
 
 import "github.com/chandu188/practice/datastructures/stack"
+
 type node struct {
 	left  *node
 	right *node
@@ -154,8 +155,8 @@ func iterativeInorder(root *node) []int {
 	res := make([]int, 0)
 	cur = cur.left
 
-	for ;cur!=nil || s.Size() !=0 ;{
-		for ;cur != nil;{
+	for cur != nil || s.Size() != 0 {
+		for cur != nil {
 			s.Push(cur)
 			cur = cur.left
 		}

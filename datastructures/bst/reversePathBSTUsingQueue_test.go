@@ -1,11 +1,12 @@
 package bst
 
 import (
-	"testing"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
+
 func TestReversePathBSTUsingQueue(t *testing.T) {
-	in := []int{50,30,70,20,40,60,80}
+	in := []int{50, 30, 70, 20, 40, 60, 80}
 	bst := NewBSTFrom(in)
 	ReversePathFromNode(bst, 70)
 	act := bst.Inorder()
