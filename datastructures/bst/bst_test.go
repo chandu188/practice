@@ -23,6 +23,11 @@ func TestBST(t *testing.T) {
 	for i, ele := range asc {
 		assert.Equal(t, ele, inorder[i])
 	}
+	inorder = bst.IterativeInorder()
+	assert.Equal(t, len(asc), len(inorder))
+	for i, ele := range asc {
+		assert.Equal(t, ele, inorder[i])
+	}
 }
 
 func NewBSTFrom(input []int) *Bst {
@@ -47,3 +52,4 @@ func TestDeleteBST(t *testing.T) {
 	}
 
 }
+

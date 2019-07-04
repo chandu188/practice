@@ -45,5 +45,4 @@ func get(n *trieNode, key string, index int) int {
 	ch := key[index]
 	n = n.keys[ch]
 	return get(n, key, index+1)
-
 }

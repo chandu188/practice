@@ -1,5 +1,6 @@
 package bst
 
+import "github.com/chandu188/practice/datastructures/stack"
 type node struct {
 	left  *node
 	right *node
@@ -140,4 +141,27 @@ func inorder(elems []int, n *node) []int {
 	elems = append(elems, n.data)
 	elems = inorder(elems, n.right)
 	return elems
+}
+
+func (b *Bst) IterativeInorder() []int {
+	return iterativeInorder(b.root)
+}
+
+func iterativeInorder(root *node) []int {
+	s := stack.NewStack()
+	cur := root
+	s.Push(cur)
+	res := make([]int, 0)
+	cur = cur.left
+
+	for ;cur!=nil || s.Size() !=0 ;{
+		for ;cur != nil;{
+			s.Push(cur)
+			cur = cur.left
+		}
+		cur = s.Pop().(*node)
+		res = append(res, cur.data)
+		cur = cur.right
+	}
+	return res
 }
