@@ -30,3 +30,8 @@ func (s *Stack) Pop() interface{} {
 	return -1
 
 }
+
+func (s *Stack) Top() interface{} {
+	return s.data[s.Size()-1]
+}
+
