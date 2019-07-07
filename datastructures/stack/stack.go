@@ -16,6 +16,10 @@ func (s *Stack) Size() int {
 	return len(s.data)
 }
 
+func (s *Stack) IsEmpty() bool {
+	return s.Size() == 0
+}
+
 func (s *Stack) Pop() interface{} {
 	if s.Size() > 0 {
 		data := s.data[len(s.data)-1]
