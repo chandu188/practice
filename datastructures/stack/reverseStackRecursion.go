@@ -1,10 +1,10 @@
 package stack
 
-func ReverseStack(st *Stack) {
+func ReverseStack(st Stack) {
 	reverseStack(st)
 }
 
-func insertAtBottom(st *Stack, n int) {
+func insertAtBottom(st Stack, n int) {
 	if st.IsEmpty() {
 		st.Push(n)
 		return
@@ -15,7 +15,7 @@ func insertAtBottom(st *Stack, n int) {
 	st.Push(ele)
 }
 
-func reverseStack(st *Stack) {
+func reverseStack(st Stack) {
 	if st.IsEmpty() {
 		return
 	}

@@ -1,8 +1,8 @@
 package stack
 
 type QueueWithStack struct {
-	s1 *Stack
-	s2 *Stack
+	s1 Stack
+	s2 Stack
 }
 
 func NewQueueUsingStack() *QueueWithStack {

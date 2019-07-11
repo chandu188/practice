@@ -1,26 +1,34 @@
 package stack
 
-type Stack struct {
+type Stack interface {
+	Push(interface{})
+	Size() int
+	IsEmpty() bool
+	Pop() interface{}
+	Top() interface{}
+}
+
+type stack struct {
 	data []interface{}
 }
 
-func NewStack() *Stack {
-	return &Stack{data: make([]interface{}, 0)}
+func NewStack() Stack {
+	return &stack{data: make([]interface{}, 0)}
 }
 
-func (s *Stack) Push(data interface{}) {
+func (s *stack) Push(data interface{}) {
 	s.data = append(s.data, data)
 }
 
-func (s *Stack) Size() int {
+func (s *stack) Size() int {
 	return len(s.data)
 }
 
-func (s *Stack) IsEmpty() bool {
+func (s *stack) IsEmpty() bool {
 	return s.Size() == 0
 }
 
-func (s *Stack) Pop() interface{} {
+func (s *stack) Pop() interface{} {
 	if s.Size() > 0 {
 		data := s.data[len(s.data)-1]
 		s.data = s.data[:s.Size()-1]
@@ -31,7 +39,6 @@ func (s *Stack) Pop() interface{} {
 
 }
 
-func (s *Stack) Top() interface{} {
+func (s *stack) Top() interface{} {
 	return s.data[s.Size()-1]
 }
-

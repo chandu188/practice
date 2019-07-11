@@ -1,12 +1,11 @@
 package stack
 
-
-func SortStack(st *Stack) {
+func SortStack(st Stack) {
 	sortStack(st)
 }
 
-func sortedInsert(st *Stack, v int) {
-	if st.IsEmpty() || v > st.Top().(int){
+func sortedInsert(st Stack, v int) {
+	if st.IsEmpty() || v > st.Top().(int) {
 		st.Push(v)
 		return
 	}
@@ -16,8 +15,7 @@ func sortedInsert(st *Stack, v int) {
 	st.Push(ele)
 }
 
-
-func sortStack(st *Stack) {
+func sortStack(st Stack) {
 	if st.IsEmpty() {
 		return
 	}

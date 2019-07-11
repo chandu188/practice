@@ -2,7 +2,7 @@ package stack
 
 type SpecialStack struct {
 	minElement int
-	*Stack
+	Stack
 }
 
 func NewMinElementStack() *SpecialStack {

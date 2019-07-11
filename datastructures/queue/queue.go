@@ -28,3 +28,7 @@ func (q *Queue) Pop() int {
 func (q *Queue) Front() int {
 	return q.data[0]
 }
+
+func (q *Queue) IsEmpty() bool {
+	return q.Size() == 0
+}
