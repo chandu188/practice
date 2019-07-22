@@ -1,21 +1,22 @@
 package dynamicprogramming
 
 import (
-	"testing"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
-func TestTilingProblem(t *testing.T)  {
-	tests := []struct{
+
+func TestTilingProblem(t *testing.T) {
+	tests := []struct {
 		input int
-		res int
+		res   int
 	}{
 		{
-			input : 3,
-			res: 3,
+			input: 3,
+			res:   3,
 		},
 		{
-			input : 4,
-			res: 5,
+			input: 4,
+			res:   5,
 		},
 	}
 
@@ -23,5 +24,5 @@ func TestTilingProblem(t *testing.T)  {
 		act := TilingProblem(tc.input)
 		assert.Equal(t, tc.res, act)
 	}
-	
+
 }

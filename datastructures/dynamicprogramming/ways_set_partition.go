@@ -51,8 +51,8 @@ func SetPartition(n, k int) int {
 	}
 
 	res := 0
-	for i:=1;i<=k;i++ {
+	for i := 1; i <= k; i++ {
 		res = res + s[n][i]
-	} 
+	}
 	return res
 }

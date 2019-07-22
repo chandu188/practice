@@ -1,10 +1,11 @@
 package dynamicprogramming
 
 import (
-	"testing"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
-func  TestUglyNumber(t *testing.T)  {
+
+func TestUglyNumber(t *testing.T) {
 	un := UglyNumber(10)
-	assert.Equal(t,3 , un)
+	assert.Equal(t, 3, un)
 }
